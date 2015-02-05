@@ -14,6 +14,8 @@ import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.MediaType;
 
 import lombok.Cleanup;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NonNull;
 import lombok.SneakyThrows;
 
@@ -24,6 +26,8 @@ import org.grade.client.upload.UploadType;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@Data
+@EqualsAndHashCode(callSuper=true)
 public class Csv extends UploadType.Private {
 
 	static final String cpart_name = "content";
@@ -45,13 +49,13 @@ public class Csv extends UploadType.Private {
 	
 	}
 	
-	@JsonProperty 
+	@JsonProperty
 	private char delimiter = ',';
 	
-	@NonNull @JsonProperty 
+	@NonNull @JsonProperty
 	private String encoding = Charset.defaultCharset().name();
 	
-	@JsonProperty 
+	@JsonProperty
 	private char quote = '"';
 	
 	
