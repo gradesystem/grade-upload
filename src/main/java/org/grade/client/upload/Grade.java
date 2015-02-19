@@ -24,7 +24,7 @@ import lombok.SneakyThrows;
 import org.glassfish.jersey.filter.LoggingFilter;
 import org.glassfish.jersey.media.multipart.MultiPartFeature;
 import org.glassfish.jersey.message.GZipEncoder;
-import org.grade.client.upload.csv.Csv;
+import org.grade.client.upload.csv.CsvParams;
 import org.grade.client.upload.dsl.Dsl.TypeClause;
 
 @Setter(PRIVATE)
@@ -33,8 +33,8 @@ public class Grade {
 	public static UploadType xml = new UploadType.Default("xml",APPLICATION_XML_TYPE);
 	public static UploadType json = new UploadType.Default("json",APPLICATION_JSON_TYPE);
 
-	public static Csv csv() { 
-		return new Csv();
+	public static CsvParams csvparams() { 
+		return new CsvParams();
 	}
 	
 	

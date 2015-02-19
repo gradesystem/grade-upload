@@ -28,7 +28,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Data
 @EqualsAndHashCode(callSuper=true)
-public class Csv extends UploadType.Private {
+public class CsvParams extends UploadType.Private {
 
 	static final String cpart_name = "content";
 	static final String ipart_name = "info";
@@ -43,7 +43,7 @@ public class Csv extends UploadType.Private {
 		media = new MediaType("multipart","form-data",params); 
 	}
 	
-	public Csv() {
+	public CsvParams() {
 		
 		super("csv");
 	
